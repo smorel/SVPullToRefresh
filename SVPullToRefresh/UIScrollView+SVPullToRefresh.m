@@ -161,7 +161,8 @@ static char UIScrollViewPullToRefreshView;
 }
 
 - (void)layoutSubviews {
-    CGFloat leftViewWidth = MAX(self.arrow.bounds.size.width,self.activityIndicatorView.bounds.size.width);
+    //Arrow 22, 48
+    CGFloat leftViewWidth = MAX(22/*self.arrow.bounds.size.width*/,self.activityIndicatorView.bounds.size.width);
     
     CGFloat margin = 10;
     CGFloat labelMaxWidth = self.bounds.size.width - margin - leftViewWidth;
@@ -202,7 +203,9 @@ static char UIScrollViewPullToRefreshView;
     }
     
     CGFloat arrowX = (self.bounds.size.width / 2) - (totalMaxWidth / 2) + (leftViewWidth - self.arrow.bounds.size.width) / 2;
-    self.arrow.frame = CGRectIntegral(CGRectMake(arrowX,(self.bounds.size.height / 2) - (self.arrow.bounds.size.height / 2),self.arrow.bounds.size.width,self.arrow.bounds.size.height));
+    
+    //Arrow 22, 48
+    self.arrow.frame = CGRectIntegral(CGRectMake(arrowX,(self.bounds.size.height / 2) - (self.arrow.bounds.size.height / 2),22,48));
     self.activityIndicatorView.center = self.arrow.center;
     
     
